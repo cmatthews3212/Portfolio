@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,4 +39,33 @@
 
 .read-the-docs {
   color: #888;
+} */
+
+body {
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #e5c9c3;
+  align-items: center;
+  padding: 0px 0px 0px 20px;
+}
+
+header ul {
+  display: flex;
+  justify-content: space-around;
+  width: 500px;
+  list-style-type: none;
+}
+
+header ul a {
+  text-decoration: none;
+  color: black;
+}
+
+footer {
+  position: relative;
+  top: 50em;
 }
