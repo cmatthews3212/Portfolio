@@ -1,12 +1,17 @@
 import { useState } from 'react';
 
 const Navigation = ({ currentPage, handlePageChange}) => {
+    const handleClick = (page, event) => {
+        event.preventDefault();
+        handlePageChange(page);
+    };
+
     return (
        <ul>
             <li>
                 <a 
                 href="#about" 
-                onClick={() => handlePageChange('About')}
+                onClick={(event) => handleClick('About', event)}
                 className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}
                 >
                     About
@@ -15,8 +20,8 @@ const Navigation = ({ currentPage, handlePageChange}) => {
             <li>
                 <a
                 href="#portfolio"
-                onClick={() => handlePageChange('Portfolio')}
-                className={currentPage === 'Portfolio' ? 'nav-link active' : 'nav-link'}
+                onClick={(event) => handleClick('Projects', event)}
+                className={currentPage === 'Projects' ? 'nav-link active' : 'nav-link'}
                 >
                     Portfolio
                 </a>
@@ -24,7 +29,7 @@ const Navigation = ({ currentPage, handlePageChange}) => {
             <li>
             <a
                 href="#contact"
-                onClick={() => handlePageChange('Contact')}
+                onClick={(event) => handleClick('Contact', event)}
                 className={currentPage === 'Contact' ? 'nav-link active' : 'nav-link'}
                 >
                     Contact
@@ -33,7 +38,7 @@ const Navigation = ({ currentPage, handlePageChange}) => {
             <li>
             <a
                 href="#resume"
-                onClick={() => handlePageChange('Resume')}
+                onClick={(event) => handleClick('Resume', event)}
                 className={currentPage === 'Resume' ? 'nav-link active' : 'nav-link'}
                 >
                     Resume
