@@ -41,10 +41,12 @@
   color: #888;
 } */
 
+
 body {
   margin: 0;
 }
 
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
@@ -101,10 +103,14 @@ header ul li:hover {
   background-color: #e5c9c3;
 }
 
+/* Footer */
+
 footer {
   position: relative;
   top: 50em;
 }
+
+/* Site wide styles */
 
 .content {
   margin: 50px 50px 0px 50px;
@@ -146,6 +152,8 @@ hr {
 .info p {
   font-size: 18px;
 }
+
+/* Contact Page */
 
 form {
   width: 75%;
@@ -192,6 +200,53 @@ form button {
 
 form button:hover {
   cursor: pointer;
+  background-color: #6c8763;
+}
+
+
+/* Projects Page */
+.projectCont img {
+  width: 100%;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+.project-info {
+  /* display: flex; */
+}
+
+.project-info h3 {
+  /* margin-left: 20px; */
+}
+
+.projectCont {
+  background-color: #e5c9c3;
+  padding: 20px;
+  border-radius: 5px;
+}
+.project-info .links {
+  display: flex;
+  flex-direction: column;
+  /* margin: 0 auto; */
+  justify-content: center;
+  width: 200px;
+}
+
+.project-info .links a {
+  font-size: 17px;
+  margin: 5px 0px 5px 0px;
+  text-decoration: none;  
+  color: black;
+  background-color: #a5b4a0;
+  padding: 10px;
+  text-align: center;
+  border-radius: 4px;
+
+}
+
+.project-info .links a:hover {
   background-color: #6c8763;
 }
 

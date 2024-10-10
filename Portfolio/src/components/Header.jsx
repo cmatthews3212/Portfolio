@@ -7,7 +7,7 @@ import Resume from './pages/Resume';
 
 
 const Header = () => {
-    const [currentPage, setCurrentPage] = useState('Projects');
+    const [currentPage, setCurrentPage] = useState('About');
 
     const renderPage = () => {
         if (currentPage === 'About') {

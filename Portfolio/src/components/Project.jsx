@@ -1,12 +1,13 @@
 import { useState } from 'react';
+import Projects from './pages/Projects';
 
 const Project = () => {
     return (
-        <div className="projectCont">
-            <h2>Project</h2>
-
+        <div>
+            <Projects />
         </div>
-    )
+    )  
+        
 }
 
 export default Project;
