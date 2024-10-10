@@ -1,17 +1,34 @@
 import { useState } from 'react';
 
 const Navigation = ({ currentPage, handlePageChange}) => {
+    const [isVisible, setIsVisible] = useState(false);
+
+    const handleMenuClick = () => {
+        setIsVisible(prevVisible => !prevVisible);
+    }
+
     const handleClick = (page, event) => {
         event.preventDefault();
         handlePageChange(page);
     };
 
+ 
     return (
-       <ul>
+        <div>
+            <div 
+            className='menu' 
+            onClick={handleMenuClick}
+            >
+                <div className="hamIcon"></div>
+                <div className="hamIcon"></div>
+                <div className="hamIcon"></div>
+            </div>
+       <ul style={{ display: isVisible ? 'block' : 'none'}}>
             <li>
                 <a 
                 href="#about" 
                 onClick={(event) => handleClick('About', event)}
+
                 className={currentPage === 'About' ? 'nav-link active' : 'nav-link'}
                 >
                     About
@@ -45,6 +62,7 @@ const Navigation = ({ currentPage, handlePageChange}) => {
                 </a>
             </li>
        </ul>
+       </div>
     )
 }
 

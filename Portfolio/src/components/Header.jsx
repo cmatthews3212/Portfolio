@@ -25,7 +25,11 @@ const Header = () => {
     };
 
     const handlePageChange = (page) => setCurrentPage(page);
-  
+
+    const menuStyle = {
+        display: 'block'
+    }
+
     return (
         <div >
         <header>
