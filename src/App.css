@@ -153,6 +153,12 @@ hr {
   font-size: 18px;
 }
 
+/* About */
+.content .imgCont img {
+  border: 3px solid #6c8763;
+  border-radius: 5px;
+}
+
 /* Contact Page */
 
 form {
