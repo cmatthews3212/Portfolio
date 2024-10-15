@@ -9,6 +9,7 @@ const Navigation = ({ currentPage, handlePageChange}) => {
 
     const handleClick = (page, event) => {
         event.preventDefault();
+        setIsVisible(false)
         handlePageChange(page);
     };
 

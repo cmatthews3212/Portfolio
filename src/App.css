@@ -207,6 +207,8 @@ form button:hover {
 /* Projects Page */
 .projectCont img {
   width: 100%;
+  border: 3px solid #6c8763;
+  border-radius: 5px;
 }
 
 h3 {
@@ -249,5 +251,19 @@ h3 {
 .project-info .links a:hover {
   background-color: #6c8763;
 }
+
+.project-info .links .private {
+  background-color: #a5b4a0;
+  opacity: 60%;
+}
+
+.project-info .links .private:hover {
+  opacity: 60%;
+  background-color: #a5b4a0;
+}
+
+
+
+
 
 
