@@ -268,6 +268,69 @@ h3 {
   background-color: #a5b4a0;
 }
 
+/* Resume */
+.resume {
+  background-color: #e5c9c3;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.resume div {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.resume div ul  {
+  /* list-style: none; */
+  margin-left: -10px;
+  margin-top: 20px;
+}
+
+.resume div ul li {
+  margin: 5px 0px 5px 0px;
+}
+
+.resume div h4 {
+  font-size: 18px;
+  margin-bottom: -10px;
+}
+
+.resume div h5 {
+  font-size: 15px;
+  margin-bottom: -10px;
+  margin-top: 15px;
+}
+
+.resume div h6 {
+  font-style: italic;
+  font-size: 15px;
+  margin-top: 15px;
+  margin-bottom: -10px;
+}
+
+div .contact ul {
+  list-style: none;
+  width: 200px;
+  margin-left: -30px;
+}
+
+div .contact ul li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.contact ul li span {
+  margin-right: 10px;
+}
+
+.contact ul a {
+  color: black;
+}
+
 
 
 
