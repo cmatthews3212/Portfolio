@@ -10,6 +10,7 @@ export default function Projects () {
         <div className="content">
             <h2>My Projects</h2>
             <hr></hr>
+            <div id="projects">
             <div className="projectCont">
                 <img src={furBabyUrl}></img>
                 <div className="project-info">
@@ -78,15 +79,16 @@ export default function Projects () {
                 <img src={bookUrl}></img>
                 <div className="project-info">
                     <h3>Hello Book</h3>
-                    <div className="links">
                         <p>Hello Book is an ecommerce website where users can browse, buy, and sell used books! It is designed for the book lovers who just want to find their next read at a reasonable price. </p>
                         <p>Note: the website may take long to load or may not load at all due to where it is being hosted.</p>
+                    <div className="links">
                         <a target='_blank' href="https://hello-books-zbnd.onrender.com/">View App</a>
                         <a target='_blank' href="https://github.com/Book-Hackers/Hello-Books">View Repository</a>
                     </div>
                 </div>
             </div>
             <hr></hr>
+            </div>
         </div>
     )
 }

@@ -272,4 +272,61 @@ h3 {
 
 
 
+@media (min-width: 850px) {
+  /* Site wide */
+  .content {
+    margin: 50px 150px 50px 150px;
+  }
+  /* About */
+
+  .imgCont {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .imgCont img {
+    width: 250px;
+    margin-left: 3%;
+    margin-right: 20px;
+  
+  }
+  .imgCont .about-info {
+    width: 50%;
+
+  
+  }
+
+  .imgCont .about-info p {
+    font-size: 20px;
+  }
+
+
+ .content p {
+    font-size: 20px;
+  }
+
+  /* Projects */
+  #projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  #projects hr {
+    display: none;
+  }
+
+  .projectCont {
+    width: 40%;
+    margin-bottom: 50px;
+  }
+
+
+  /* Contact */
+  form {
+    width: 400px;
+  }
+  
+}
 
