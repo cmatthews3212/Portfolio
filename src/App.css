@@ -159,6 +159,29 @@ hr {
   border-radius: 5px;
 }
 
+.provide, .list {
+  list-style-type: none;
+  margin-left: -20px;
+}
+
+.provide li {
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+
+.provide li span {
+  margin: 10px 10px 10px 0px;
+  position: relative;
+  top: 8px;
+  font-size: 30px;
+}
+
+/* .list {
+  width: 600px;
+} */
+
+
+
 /* Contact Page */
 
 form {
@@ -188,6 +211,17 @@ form input {
 form input:focus {
   border: 2px solid #6c8763;
   outline: none;
+}
+
+form textarea:focus {
+  border: 2px solid #6c8763;
+  outline: none;
+}
+
+form textarea {
+  height: 100px;
+  border-radius: 4px;
+  border: none;
 }
 
 form .btnCont {
