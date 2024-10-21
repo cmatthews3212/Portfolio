@@ -86,7 +86,7 @@ export default function Contact () {
                 </div>
                 <div className='input'>
                     <label for="email">Email</label>
-                    <input onChange={handleInputChange} value={formData.email} type="text" id="email" name="email"></input>
+                    <input onChange={handleInputChange} value={formData.email} type="email" id="email" name="email"></input>
                 </div>
                 <div className='input'>
                     <label for="phone">Phone</label>
