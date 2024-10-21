@@ -428,6 +428,22 @@ div .contact ul li {
   .content {
     margin: 125px 150px 100px 150px;
   }
+
+
+  /* header */
+  .menu {
+    display: none;
+  }
+
+
+  .menu-items li {
+    display: inline;
+    margin: 15px;
+    position: relative;
+    top: -55px;
+  }
+
+
   /* About */
 
   .imgCont {
