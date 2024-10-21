@@ -25,7 +25,7 @@ const Navigation = ({ currentPage, handlePageChange}) => {
                 <div className="hamIcon"></div>
             </div>
        <ul style={{ display: isVisible ? 'block' : 'none'}}>
-            <li>
+            <li className={currentPage === 'About' ? ' active' : ''}>
                 <a 
                 href="#about" 
                 onClick={(event) => handleClick('About', event)}
@@ -35,7 +35,7 @@ const Navigation = ({ currentPage, handlePageChange}) => {
                     About
                 </a>
             </li>
-            <li>
+            <li className={currentPage === 'Projects' ? 'active' : ''}>
                 <a
                 href="#portfolio"
                 onClick={(event) => handleClick('Projects', event)}
@@ -44,7 +44,7 @@ const Navigation = ({ currentPage, handlePageChange}) => {
                     Portfolio
                 </a>
             </li>
-            <li>
+            <li className={currentPage === 'Contact' ? ' active' : ''}>
             <a
                 href="#contact"
                 onClick={(event) => handleClick('Contact', event)}
@@ -53,7 +53,7 @@ const Navigation = ({ currentPage, handlePageChange}) => {
                     Contact
                 </a>
             </li>
-            <li>
+            <li className={currentPage === 'Resume' ? ' active' : ''}>
             <a
                 href="#resume"
                 onClick={(event) => handleClick('Resume', event)}

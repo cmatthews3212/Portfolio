@@ -17,34 +17,33 @@ export default function Contact () {
         description: ''
     });
 
+    const [touched, setTouched] = useState(false);
+    const [error, setError] = useState('');
+
     const [errorMessage, setErrorMessage] = useState('')
 
     init('SyDAG4upyEVJH2_Rd')
+
+    const handleBlur = () => {
+        // setTouched(true);
+        if (!formData) {
+            setError('This field is required.')
+        } else {
+            setError('');
+        }
+    };
     
     
     const handleInputChange = (e) => {
-        // const { name, value } = e.target;
-        // if (name === 'firstName') {
-        //   return  setFirstName(value)
-        // } else if (name === 'lastName') {
-        //    return setLastName(value)
-        // } else if (name === 'email') {
-        //    return setEmail(value)
-        // } else if (name === 'phone') {
-        //    return setPhone(value)
-        // } else if (name === 'ministry') {
-        //     return setMinistry(value)
-        // } else if (name === 'description') {
-        //     return setDescription(value)
-        // } else {
-        //     console.error("Value not set")
-        // }
 
         const { name, value } = e.target;
         setFormData({
             ...formData,
             [name]: value
         });
+        if (error) {
+            setError('')
+        }
     }
 
     const sendEmail = (e) => {
@@ -78,7 +77,8 @@ export default function Contact () {
             <form className="form" onSubmit={sendEmail}>
                 <div className='input'>
                     <label for="firstName">First Name</label>
-                    <input onChange={handleInputChange} value={formData.firstName} type="text" id="firstName" name="firstName"></input>
+                    <input onBlur={handleBlur} onChange={handleInputChange} value={formData.firstName} type="text" id="firstName" name="firstName"></input>
+                    { error && <span style={{color: 'red'}}>{error}</span>}
                 </div>
                 <div className='input'>
                     <label for="lastName">Last Name</label>
@@ -97,7 +97,7 @@ export default function Contact () {
                     <input onChange={handleInputChange} value={formData.ministry} type="text" id="ministry" name="ministry"></input>
                 </div>
                 <div className='input'>
-                    <label for="description">Non-Profit Description</label>
+                    <label for="description">Non-Profit Description or Personal Message</label>
                     <textarea onChange={handleInputChange} value={formData.description} id="description" name="description"></textarea>
                 </div>
                 <div className='btnCont'>

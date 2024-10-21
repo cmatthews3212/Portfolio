@@ -107,6 +107,10 @@ header ul li:hover {
   background-color: #e5c9c3;
 }
 
+.active {
+  background-color: #e5c9c3;
+}
+
 /* Footer */
 
 footer {
