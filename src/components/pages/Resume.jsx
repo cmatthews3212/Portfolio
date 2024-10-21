@@ -1,3 +1,5 @@
+const pdfUrl = '../../assets/pdfs/matthews-resume-2023.pdf';
+
 export default function Resume () {
     return (
         <div className="content">
@@ -67,6 +69,7 @@ export default function Resume () {
                 </div>
 
             </div>
+            <a className="pdf-download" href={pdfUrl} download><button>Download Resume</button></a>
         </div>
     )
 }
