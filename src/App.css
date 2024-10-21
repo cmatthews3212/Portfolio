@@ -52,7 +52,11 @@ header {
   justify-content: space-between;
   background-color: #e5c9c3;
   align-items: center;
+  width: 100%;
   padding: 0px 0px 0px 20px;
+  position: fixed;
+  top: 0%;
+  
 }
 
 .menu {
@@ -106,14 +110,34 @@ header ul li:hover {
 /* Footer */
 
 footer {
+ background-color: #e5c9c3;
+ margin: 0;
+ padding: 20px 20px 20px 30px;
+}
+footer h4 {
+  font-size: 20px;
+}
+
+footer ul {
+  list-style-type: none;
+}
+footer ul li {
+  margin: 5px 0px 0px 0px;
+  font-size: 20px;
+
+}
+
+footer ul li span {
+  margin: 0px 5px 0px 0px;
   position: relative;
-  top: 50em;
+  top: 8px;
+  font-size: 25px;
 }
 
 /* Site wide styles */
 
 .content {
-  margin: 50px 50px 0px 50px;
+  margin: 125px 50px 150px 50px;
 }
 
 .content h2 {

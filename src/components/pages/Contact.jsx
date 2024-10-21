@@ -72,7 +72,7 @@ export default function Contact () {
     }
 
     return (
-        <div className="content">
+        <div className="content contact-content">
             <h2>Request a Consultation</h2>
             <hr></hr>
             <form className="form" onSubmit={sendEmail}>
