@@ -338,6 +338,11 @@ h3 {
   background-color: #a5b4a0;
 }
 
+.input span {
+  margin-top: 5px;
+}
+
+
 /* Resume */
 .resume {
   background-color: #e5c9c3;

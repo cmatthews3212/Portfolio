@@ -17,19 +17,25 @@ export default function Contact () {
         description: ''
     });
 
-    const [touched, setTouched] = useState(false);
-    const [error, setError] = useState('');
+   
+    const [error, setError] = useState({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        ministry: '',
+        description: ''
+    });
 
     const [errorMessage, setErrorMessage] = useState('')
 
     init('SyDAG4upyEVJH2_Rd')
 
-    const handleBlur = () => {
-        // setTouched(true);
-        if (!formData) {
-            setError('This field is required.')
+    const handleBlur = (field) => {
+        if (!formData[field]) {
+            setError((prevError) => ({...prevError, [field]: 'This field is required.'}));
         } else {
-            setError('');
+            setError((prevError) => ({ ...prevError, [field]: ''}));
         }
     };
     
@@ -67,8 +73,9 @@ export default function Contact () {
             ministry: '',
             description: ''
         });
-        }
     }
+        }
+
 
     return (
         <div className="content contact-content">
@@ -77,28 +84,33 @@ export default function Contact () {
             <form className="form" onSubmit={sendEmail}>
                 <div className='input'>
                     <label for="firstName">First Name</label>
-                    <input onBlur={handleBlur} onChange={handleInputChange} value={formData.firstName} type="text" id="firstName" name="firstName"></input>
-                    { error && <span style={{color: 'red'}}>{error}</span>}
+                    <input onBlur={() => handleBlur('firstName')} onChange={handleInputChange} value={formData.firstName} type="text" id="firstName" name="firstName"></input>
+                    { error.firstName && <span style={{color: 'red'}}>{error.firstName}</span>}
                 </div>
                 <div className='input'>
                     <label for="lastName">Last Name</label>
-                    <input onChange={handleInputChange} value={formData.lastName} type="text" id="lastName" name="lastName"></input>
+                    <input onBlur={() => handleBlur('lastName')} onChange={handleInputChange} value={formData.lastName} type="text" id="lastName" name="lastName"></input>
+                    { error.lastName && <span style={{color: 'red'}}>{error.lastName}</span>}
                 </div>
                 <div className='input'>
                     <label for="email">Email</label>
-                    <input onChange={handleInputChange} value={formData.email} type="email" id="email" name="email"></input>
+                    <input onBlur={() => handleBlur('email')} onChange={handleInputChange} value={formData.email} type="email" id="email" name="email"></input>
+                    { error.email && <span style={{color: 'red'}}>{error.email}</span>}
                 </div>
                 <div className='input'>
                     <label for="phone">Phone</label>
-                    <input onChange={handleInputChange} value={formData.phone} type="text" id="phone" name="phone"></input>
+                    <input onBlur={() => handleBlur('phone')} onChange={handleInputChange} value={formData.phone} type="text" id="phone" name="phone"></input>
+                    { error.phone && <span style={{color: 'red'}}>{error.phone}</span>}
                 </div>
                 <div className='input'>
                     <label for="ministry">Non-Profit Name</label>
-                    <input onChange={handleInputChange} value={formData.ministry} type="text" id="ministry" name="ministry"></input>
+                    <input onBlur={() => handleBlur('ministry')} onChange={handleInputChange} value={formData.ministry} type="text" id="ministry" name="ministry"></input>
+                    { error.ministry && <span style={{color: 'red'}}>{error.ministry}</span>}
                 </div>
                 <div className='input'>
                     <label for="description">Non-Profit Description or Personal Message</label>
-                    <textarea onChange={handleInputChange} value={formData.description} id="description" name="description"></textarea>
+                    <textarea onBlur={() => handleBlur('description')} onChange={handleInputChange} value={formData.description} id="description" name="description"></textarea>
+                    { error.description && <span style={{color: 'red'}}>{error.description}</span>}
                 </div>
                 <div className='btnCont'>
                     <button type="submit">Submit Request</button>
