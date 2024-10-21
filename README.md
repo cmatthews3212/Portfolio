@@ -17,7 +17,7 @@ This application is a personal portfolio designed to display my skills in react 
 n/a
 
 ## Usage
-To use this app, navigate through navigation to view my projects, resume, and bio as well as fill out the form to request a consultation.
+To use this app, navigate through navigation to view my projects, resume, and bio as well as fill out the form to request a consultation. NOTE: to view mobile and desktop versions, inspect the page, choose your viewport, then REFRESH THE PAGE, to see how you would land on the page correctly!
 
 ## Licenses
 #### MIT License
